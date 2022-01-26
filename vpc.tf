@@ -23,7 +23,7 @@ resource "google_compute_subnetwork" "subnet" {
  region      = "${var.region}"
 }
 
-##### VPC firewall configuration: Doing additional because will 
+##### VPC firewall configuration: Doing additional because will do ssh to check docker image part####
 resource "google_compute_firewall" "firewall" {
   name    = "dunnhumby-firewall"
   network = "${google_compute_network.vpc.name}"
